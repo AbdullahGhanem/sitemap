@@ -103,11 +103,11 @@ class Sitemap
             $except = ['images'];
         }
 
-        return Response::create((string) $this->get($except), 200, [
+        return new Response((string) $this->get($except), 200, [
             'Content-Type' => 'application/xml',
         ]);
     }
-
+    
     /**
      * Saving data to files.
      *
